@@ -1,4 +1,12 @@
-const jobs = [...jobsAT, ...jobsDE];
+const jobs = [...jobsAT, ...jobsDE, ...jobsCH, ...jobsLU, ...jobsPL];
+
+const countryMeta = {
+  AT: { name: 'Österreich', flag: '🇦🇹' },
+  DE: { name: 'Deutschland', flag: '🇩🇪' },
+  CH: { name: 'Schweiz', flag: '🇨🇭' },
+  LU: { name: 'Luxemburg', flag: '🇱🇺' },
+  PL: { name: 'Polen', flag: '🇵🇱' }
+};
 
 const companyWebsites = {
   'KUKA GmbH': 'https://www.kuka.com/de-at',
@@ -26,7 +34,11 @@ const companyWebsites = {
   'über meinestadt.de': 'https://www.meinestadt.de/',
   'Fischer EKF GmbH & Co. KG': 'https://www.fischer-ekf.de/',
   'Sohns Maschinenbau GmbH': 'https://www.sohns-maschinenbau.de/',
-  'Strautmann Systemtechnik': 'https://www.strautmann-systemtechnik.de/'
+  'Strautmann Systemtechnik': 'https://www.strautmann-systemtechnik.de/',
+  'IAR Group AG': 'https://www.iargroup.com/',
+  'Siemens Schweiz AG': 'https://www.siemens.com/ch/de.html',
+  'ECT POLAND AUTOMATION Sp. z o.o.': 'http://ect-tech.com/en/channels/906.html',
+  'ledniowski.com Michał Ledniowski': 'https://www.ledniowski.com/'
 };
 
 const body = document.getElementById('jobsBody');
@@ -62,9 +74,10 @@ function render() {
     const companyHtml = companyUrl
       ? `<a class="company-link" href="${esc(companyUrl)}" target="_blank" rel="noopener noreferrer" title="Unternehmenswebsite öffnen">${esc(j.company)} ↗</a>`
       : esc(j.company);
+    const country = countryMeta[j.country] || { name: j.country, flag: '' };
     return `
     <tr>
-      <td class="country">${j.country === 'AT' ? '🇦🇹 Österreich' : '🇩🇪 Deutschland'}</td>
+      <td class="country">${country.flag} ${country.name}</td>
       <td class="jobtitle"><a class="job-link" href="${esc(j.url)}" target="_blank" rel="noopener noreferrer" title="Originalausschreibung öffnen">${esc(j.title)} ↗</a></td>
       <td class="company">${companyHtml}</td>
       <td class="location">${esc(j.location)}</td>
@@ -75,7 +88,8 @@ function render() {
       <td><span class="small">${esc(j.freshness)}<br>Link geprüft: 16.07.2026</span></td>
     </tr>`;
   }).join('');
-  const countryText = selectedCountry === 'AT' ? ' in Österreich' : selectedCountry === 'DE' ? ' in Deutschland' : '';
+  const selected = countryMeta[selectedCountry];
+  const countryText = selected ? ` in ${selected.name}` : '';
   resultline.textContent = `${filtered.length} Treffer${countryText}${onlyKuka ? ' mit KUKA-Bezug' : ''}`;
   empty.style.display = filtered.length ? 'none' : 'block';
   document.querySelector('.scroll').style.display = filtered.length ? 'block' : 'none';
@@ -88,7 +102,9 @@ buttons.forEach(btn => btn.addEventListener('click', () => {
 search.addEventListener('input', render);
 kukaOnly.addEventListener('change', render);
 
-document.getElementById('countAT').textContent = jobs.filter(j => j.country === 'AT').length;
-document.getElementById('countDE').textContent = jobs.filter(j => j.country === 'DE').length;
+for (const code of Object.keys(countryMeta)) {
+  const counter = document.getElementById(`count${code}`);
+  if (counter) counter.textContent = jobs.filter(j => j.country === code).length;
+}
 document.getElementById('countKuka').textContent = jobs.filter(j => j.kuka !== 'no').length;
 render();
