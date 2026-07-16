@@ -45,7 +45,11 @@ const companyWebsites = {
   'Strautmann Systemtechnik':'https://www.strautmann-systemtechnik.de/',
   'IAR Group AG':'https://www.iargroup.com/',
   'Siemens Schweiz AG':'https://www.siemens.com/ch/de.html',
+  'I/O TECH sp. z o.o.':'https://iotech.com.pl/',
   'ECT POLAND AUTOMATION Sp. z o.o.':'http://ect-tech.com/en/channels/906.html',
+  'PROPOINT S.A.':'https://www.propoint.pl/',
+  'Robot Partner Sp. z o.o.':'https://www.robotpartner.pl/',
+  'ROBOTPOL ROBOTYZACJA PRZEMYSŁU':'https://robotpol.pl/',
   'ledniowski.com Michał Ledniowski':'https://www.ledniowski.com/'
 };
 
