@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aktuell verifizierte Stellen für Roboterprogrammierung und Robotik-Applikation in Österreich und Deutschland, mit KUKA-Schwerpunkt.">
+  <title>Robotik-Jobs Österreich & Deutschland – Stand 16.07.2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Stellen für Roboterprogrammierung & Robotik-Applikation</h1>
+    <p class="lead">Österreich und Deutschland, getrennt filterbar. KUKA-Nennungen werden priorisiert und ausdrücklich gekennzeichnet.</p>
+    <div class="meta">
+      <span>Recherche-Stand: 16.07.2026</span>
+      <span>Direkte Ausschreibungslinks</span>
+      <span>Nur fachlich passende Treffer</span>
+    </div>
+  </header>
+
+  <section class="summary" aria-label="Zusammenfassung">
+    <div class="card"><strong id="countAT">7</strong><span>verifizierte Treffer in Österreich</span></div>
+    <div class="card"><strong id="countDE">19</strong><span>verifizierte Treffer in Deutschland</span></div>
+    <div class="card"><strong id="countKuka">14</strong><span>Treffer mit ausdrücklichem KUKA-Bezug</span></div>
+  </section>
+
+  <div class="controls">
+    <div class="segmented" role="group" aria-label="Land filtern">
+      <button class="active" data-country="all">Alle</button>
+      <button data-country="AT">Österreich</button>
+      <button data-country="DE">Deutschland</button>
+    </div>
+    <input class="search" id="search" type="search" placeholder="Titel, Firma, Ort oder Technologie suchen …" aria-label="Tabelle durchsuchen">
+    <label class="check"><input id="kukaOnly" type="checkbox"> Nur KUKA-Treffer</label>
+  </div>
+  <div class="resultline" id="resultline"></div>
+
+  <div class="tablebox">
+    <div class="scroll">
+      <table id="jobsTable">
+        <thead>
+          <tr>
+            <th>Land</th>
+            <th>Position</th>
+            <th>Unternehmen</th>
+            <th>Ort</th>
+            <th>KUKA</th>
+            <th>Passung</th>
+            <th>Aufgabenschwerpunkt</th>
+            <th>Rahmen</th>
+            <th>Quelle / Aktualität</th>
+            <th>Link</th>
+          </tr>
+        </thead>
+        <tbody id="jobsBody"></tbody>
+      </table>
+    </div>
+    <div class="empty" id="empty">Keine Treffer für die gewählten Filter.</div>
+  </div>
+
+  <div class="note"><strong>Abgrenzung:</strong> Aufgenommen wurden erreichbare Ausschreibungen mit tatsächlicher Roboterprogrammierung, Offline-Simulation, Inbetriebnahme oder Robotik-Applikationsentwicklung. Reine Vertriebs-, Wartungs-, Produktions- und allgemeine Mechatronikstellen wurden ausgeschlossen. „Alle“ bedeutet hier alle fachlich passenden, am Stichtag verifizierten Treffer in den systematisch geprüften zugänglichen Portalen und Ausschreibungen; eine vollständige Erfassung sämtlicher Arbeitgeber-ATS im gesamten Markt ist technisch nicht garantierbar.</div>
+  <footer>Stellenanzeigen können kurzfristig geändert oder geschlossen werden. Vor Bewerbung bitte die Originalausschreibung erneut prüfen.</footer>
+</div>
+
+<script src="jobs-at.js"></script>
+<script src="jobs-de.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
