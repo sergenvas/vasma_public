@@ -31,6 +31,8 @@ const companyWebsites = {
   'INperfektion GmbH':'https://www.inperfektion.de/',
   'NMH GmbH':'https://www.nmh.de/',
   '2-Connect GmbH':'https://www.2-connect.de/',
+  'Baumann GmbH':'https://www.baumann-automation.com/',
+  'BEWA solutions GmbH':'https://www.bewa-solutions.de/',
   'KRÖNING – Automation':'https://www.kroening-automation.de/',
   'WMS-engineering Werkzeuge-Maschinen-Systeme GmbH':'https://www.wms-engineering.de/',
   'FERCHAU':'https://www.ferchau.com/de/de',
