@@ -25,6 +25,42 @@ const jobsPL = [
   },
   {
     country: 'PL',
+    title: 'Młodszy/a Programista/ka Robotyki – Dział Budowy Maszyn',
+    company: 'PROPOINT S.A.',
+    location: 'Gliwice',
+    kuka: 'partner',
+    match: 'direct',
+    focus: 'Programmierung und Inbetriebnahme industrieller Roboter und Automatisierungstechnik, Unterstützung der Offline-Robotik, Software-Rollout und Anlaufbegleitung; FANUC-Erfahrung besonders erwünscht.',
+    conditions: 'Lokale Tätigkeit · Dienstreisen innerhalb Polens · ab 5.400 PLN brutto/Monat',
+    freshness: 'Arbeitgeber direkt · geprüft 16.07.2026',
+    url: 'https://www.propoint.pl/oferta-pracy/mlodszy-a-programista-ka-robotyki-dzial-budowy-maszyn-praca-lokalna/'
+  },
+  {
+    country: 'PL',
+    title: 'Programista/ka Robotyki Online',
+    company: 'PROPOINT S.A.',
+    location: 'Białystok / Gdynia / Gliwice / Rzeszów',
+    kuka: 'partner',
+    match: 'direct',
+    focus: 'Online-Programmierung und Inbetriebnahme industrieller Roboter, Automatisierung von Produktionslinien, Kollisions- und Sicherheitszonenprüfung sowie Anlaufbegleitung.',
+    conditions: 'Vollzeit · 70–80 % internationale Reisen · ab 6.100 PLN brutto/Monat plus Auslandszulage',
+    freshness: 'Arbeitgeber direkt · geprüft 16.07.2026',
+    url: 'https://www.propoint.pl/oferta-pracy/programista-ka-robotyki-online-praca-delegacyjna/'
+  },
+  {
+    country: 'PL',
+    title: 'Robotyk – Automatyk',
+    company: 'Robot Partner Sp. z o.o.',
+    location: 'Lublin',
+    kuka: 'partner',
+    match: 'direct',
+    focus: 'Programmierung von Robotern und SPS, HMI-Visualisierung, elektrische und pneumatische Steuerungen sowie Konstruktion und Inbetriebnahme robotergestützter Maschinen.',
+    conditions: 'Arbeitgeber-Direktausschreibung · Details über Karriereseite',
+    freshness: 'Arbeitgeber direkt · geprüft 16.07.2026',
+    url: 'https://www.robotpartner.pl/en/company/career/'
+  },
+  {
+    country: 'PL',
     title: 'Automatyk – Programista robotów przemysłowych',
     company: 'ROBOTPOL ROBOTYZACJA PRZEMYSŁU',
     location: 'Kłobuczyno',
