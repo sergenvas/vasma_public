@@ -58,24 +58,27 @@
     .resultline { color: var(--muted); margin: 8px 2px 12px; font-size: .92rem; }
     .tablebox { background: #fff; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); }
     .scroll { overflow-x: auto; }
-    table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 1200px; }
+    table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 1080px; }
     th { position: sticky; top: 0; z-index: 2; background: #eaf2f8; color: var(--blue-dark); text-align: left; font-size: .78rem; text-transform: uppercase; letter-spacing: .045em; padding: 13px 12px; border-bottom: 1px solid var(--line); }
     td { padding: 13px 12px; border-bottom: 1px solid #edf1f4; vertical-align: top; font-size: .91rem; }
     tbody tr:hover { background: #fbfdff; }
     tbody tr:last-child td { border-bottom: 0; }
     .country { font-weight: 800; white-space: nowrap; }
-    .jobtitle { font-weight: 750; min-width: 240px; }
-    .company { min-width: 190px; }
-    .location { min-width: 135px; }
-    .focus { min-width: 270px; }
-    .conditions { min-width: 170px; }
+    .jobtitle { font-weight: 750; min-width: 225px; }
+    .company { min-width: 180px; }
+    .location { min-width: 125px; }
+    .focus { min-width: 250px; }
+    .conditions { min-width: 160px; }
+    .job-link, .company-link { text-decoration: none; overflow-wrap: anywhere; }
+    .job-link { color: var(--blue-dark); font-weight: 800; }
+    .company-link { color: #334d60; font-weight: 700; }
+    .job-link:hover, .company-link:hover { text-decoration: underline; color: var(--blue); }
+    .job-link:focus-visible, .company-link:focus-visible { outline: 3px solid rgba(246,146,30,.45); outline-offset: 3px; border-radius: 3px; }
     .badge { display: inline-flex; align-items: center; border-radius: 999px; padding: 5px 9px; font-size: .78rem; font-weight: 750; line-height: 1.2; }
     .badge.kuka { background: var(--amber-bg); color: var(--amber); }
     .badge.neutral { background: #edf2f5; color: #52616c; }
     .badge.direct { background: var(--green-bg); color: var(--green); }
     .badge.extended { background: #eef0ff; color: #444f9e; }
-    .apply { display: inline-block; text-decoration: none; font-weight: 750; color: #fff; background: var(--blue); padding: 8px 11px; border-radius: 9px; white-space: nowrap; }
-    .apply:hover { background: var(--blue-dark); }
     .small { color: var(--muted); font-size: .82rem; }
     .note { margin-top: 18px; background: #fffaf3; border: 1px solid #f1d5ad; border-left: 5px solid var(--orange); border-radius: 12px; padding: 14px 16px; color: #5f4626; font-size: .9rem; }
     footer { color: var(--muted); font-size: .82rem; margin-top: 18px; }
@@ -96,5 +99,5 @@
       header { color:#000; background:#fff; box-shadow:none; border:1px solid #bbb; }
       .tablebox { box-shadow:none; }
       th { position:static; }
-      .apply { color:#000; background:none; padding:0; text-decoration:underline; }
+      .job-link, .company-link { color:#000; text-decoration:underline; }
     }
