@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Aktuell verifizierte Stellen für Roboterprogrammierung und Robotik-Applikation in Österreich und Deutschland, mit KUKA-Schwerpunkt.">
-  <title>Robotik-Jobs Österreich & Deutschland – Stand 16.07.2026</title>
+  <meta name="description" content="Aktuell verifizierte Stellen für Roboterprogrammierung und Robotik-Applikation in Österreich, Deutschland, der Schweiz, Luxemburg und Polen, mit KUKA-Schwerpunkt.">
+  <title>Robotik-Jobs Europa – Stand 16.07.2026</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <div class="wrap">
   <header>
     <h1>Stellen für Roboterprogrammierung & Robotik-Applikation</h1>
-    <p class="lead">Österreich und Deutschland, getrennt filterbar. KUKA-Nennungen werden priorisiert und ausdrücklich gekennzeichnet.</p>
+    <p class="lead">Österreich, Deutschland, Schweiz, Luxemburg und Polen, getrennt filterbar. KUKA-Nennungen werden priorisiert und ausdrücklich gekennzeichnet.</p>
     <div class="meta">
       <span>Recherche-Stand: 16.07.2026</span>
       <span>Position anklicken: Originalausschreibung</span>
@@ -22,7 +22,10 @@
   <section class="summary" aria-label="Zusammenfassung">
     <div class="card"><strong id="countAT">7</strong><span>verifizierte Treffer in Österreich</span></div>
     <div class="card"><strong id="countDE">19</strong><span>verifizierte Treffer in Deutschland</span></div>
-    <div class="card"><strong id="countKuka">14</strong><span>Treffer mit ausdrücklichem KUKA-Bezug</span></div>
+    <div class="card"><strong id="countCH">2</strong><span>verifizierte Treffer in der Schweiz</span></div>
+    <div class="card"><strong id="countLU">0</strong><span>verifizierte Treffer in Luxemburg</span></div>
+    <div class="card"><strong id="countPL">4</strong><span>verifizierte Treffer in Polen</span></div>
+    <div class="card"><strong id="countKuka">18</strong><span>Treffer mit ausdrücklichem KUKA-Bezug</span></div>
   </section>
 
   <div class="controls">
@@ -30,6 +33,9 @@
       <button class="active" data-country="all">Alle</button>
       <button data-country="AT">Österreich</button>
       <button data-country="DE">Deutschland</button>
+      <button data-country="CH">Schweiz</button>
+      <button data-country="LU">Luxemburg</button>
+      <button data-country="PL">Polen</button>
     </div>
     <input class="search" id="search" type="search" placeholder="Titel, Firma, Ort oder Technologie suchen …" aria-label="Tabelle durchsuchen">
     <label class="check"><input id="kukaOnly" type="checkbox"> Nur KUKA-Treffer</label>
@@ -58,12 +64,15 @@
     <div class="empty" id="empty">Keine Treffer für die gewählten Filter.</div>
   </div>
 
-  <div class="note"><strong>Abgrenzung:</strong> Aufgenommen wurden erreichbare Ausschreibungen mit tatsächlicher Roboterprogrammierung, Offline-Simulation, Inbetriebnahme oder Robotik-Applikationsentwicklung. Reine Vertriebs-, Wartungs-, Produktions- und allgemeine Mechatronikstellen wurden ausgeschlossen. „Alle“ bedeutet hier alle fachlich passenden, am Stichtag verifizierten Treffer in den systematisch geprüften zugänglichen Portalen und Ausschreibungen; eine vollständige Erfassung sämtlicher Arbeitgeber-ATS im gesamten Markt ist technisch nicht garantierbar.</div>
+  <div class="note"><strong>Abgrenzung:</strong> Aufgenommen wurden erreichbare Ausschreibungen mit tatsächlicher Roboterprogrammierung, Offline-Simulation, Inbetriebnahme oder Robotik-Applikationsentwicklung. Reine Vertriebs-, Wartungs-, Produktions- und allgemeine Mechatronikstellen wurden ausgeschlossen. Für Luxemburg ergab die öffentliche Suche am Stichtag keinen belastbaren Direkttreffer. „Alle“ bedeutet alle fachlich passenden, am Stichtag verifizierten Treffer in den systematisch geprüften zugänglichen Portalen und Ausschreibungen; eine vollständige Erfassung sämtlicher Arbeitgeber-ATS im gesamten Markt ist technisch nicht garantierbar.</div>
   <footer>Stellenanzeigen können kurzfristig geändert oder geschlossen werden. Vor Bewerbung bitte die Originalausschreibung erneut prüfen.</footer>
 </div>
 
 <script src="jobs-at.js"></script>
 <script src="jobs-de.js"></script>
+<script src="jobs-ch.js"></script>
+<script src="jobs-lu.js"></script>
+<script src="jobs-pl.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
