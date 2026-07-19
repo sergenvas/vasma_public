@@ -58,7 +58,7 @@
     .resultline { color: var(--muted); margin: 8px 2px 12px; font-size: .92rem; }
     .tablebox { background: #fff; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); }
     .scroll { overflow-x: auto; }
-    table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 1080px; }
+    table { border-collapse: separate; border-spacing: 0; width: 100%; min-width: 1120px; }
     th { position: sticky; top: 0; z-index: 2; background: #eaf2f8; color: var(--blue-dark); text-align: left; font-size: .78rem; text-transform: uppercase; letter-spacing: .045em; padding: 13px 12px; border-bottom: 1px solid var(--line); }
     td { padding: 13px 12px; border-bottom: 1px solid #edf1f4; vertical-align: top; font-size: .91rem; }
     tbody tr:hover { background: #fbfdff; }
@@ -69,6 +69,8 @@
     .location { min-width: 125px; }
     .focus { min-width: 250px; }
     .conditions { min-width: 160px; }
+    .car-head, .car-cell { width: 54px; min-width: 54px; text-align: center; }
+    .car-marker { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 28px; border-radius: 999px; background: #e8f3fb; border: 1px solid #bfd8ea; font-size: 1.05rem; cursor: help; }
     .job-link, .company-link { text-decoration: none; overflow-wrap: anywhere; }
     .job-link { color: var(--blue-dark); font-weight: 800; }
     .company-link { color: #334d60; font-weight: 700; }
