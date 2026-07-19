@@ -79,12 +79,23 @@ function matchLabel(value) {
     : '<span class="badge extended">Erweiterter Treffer</span>';
 }
 
+function carLabel(value) {
+  if (value === 'private') {
+    return '<span class="car-marker" role="img" aria-label="Firmenwagen auch zur Privatnutzung" title="Firmenwagen – auch zur Privatnutzung">🚗</span>';
+  }
+  if (value === 'service') {
+    return '<span class="car-marker" role="img" aria-label="Dienst- oder Servicefahrzeug für Außeneinsätze" title="Dienst-/Servicefahrzeug für Außeneinsätze">🚗</span>';
+  }
+  return '';
+}
+
 function render() {
   const query = search.value.trim().toLocaleLowerCase('de');
   const filtered = jobs.filter(job => {
     const countryOk = selectedCountry === 'all' || job.country === selectedCountry;
     const kukaOk = !kukaOnly.checked || job.kuka !== 'no';
-    const text = `${job.title} ${job.company} ${job.location} ${job.focus} ${job.conditions}`.toLocaleLowerCase('de');
+    const vehicleText = job.car ? 'dienstfahrzeug firmenwagen servicefahrzeug auto' : '';
+    const text = `${job.title} ${job.company} ${job.location} ${job.focus} ${job.conditions} ${vehicleText}`.toLocaleLowerCase('de');
     return countryOk && kukaOk && (!query || text.includes(query));
   });
 
@@ -103,6 +114,7 @@ function render() {
       <td>${matchLabel(job.match)}</td>
       <td class="focus">${esc(job.focus)}</td>
       <td class="conditions">${esc(job.conditions)}</td>
+      <td class="car-cell">${carLabel(job.car)}</td>
       <td><span class="small">${esc(job.freshness)}<br>Link geprüft: 16.07.2026</span></td>
     </tr>`;
   }).join('');
